@@ -8,5 +8,9 @@ const controllerLogin = require("../controllers/loginControllers");
 router.get('/', controllerLogin.login);
 router.post('/validar', controllerLogin.validarPSW);
 
+//router.post('/listarLivros', controllerLogin.livrosListar);
+
+
 module.exports = router
+
 

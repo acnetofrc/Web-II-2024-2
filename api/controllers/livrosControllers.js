@@ -5,7 +5,8 @@ module.exports = {
     getById,
     create,
     update,
-    remove
+    remove,
+    livrosListar    
 }
 
 function getAll(req, res) {
@@ -83,3 +84,22 @@ function remove(req, res){
         }
     })
 }
+
+function livrosListar(req, res) {
+    console.log('Controller Livros');
+    livrosController.listarLivros(function(err, result){
+      console.log('Listar Livros');
+      if(err){
+        throw err;
+      }else{
+        res.render('frm_livrosListar.ejs', {
+          title: 'Livros',
+          empresa: 'Fatec Franca - Programação Script - WEB',
+          rota: req.originalUrl,
+          obj_livros: result
+        });      
+      }
+    }
+  )
+}
+

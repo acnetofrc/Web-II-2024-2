@@ -2,7 +2,8 @@ const loginModels = require("../models/loginModels.js")
 
 module.exports = {
     login,
-    validarPSW    
+    validarPSW,
+    livrosListar
 }
  
 function login(req, res) {
@@ -39,3 +40,22 @@ function validarPSW(req, res) {
         }
     })
 }
+
+function livrosListar(req, res) {
+    console.log('Controller Livros');
+    livrosController.listarLivros(function(err, result){
+      console.log('Listar Livros');
+      if(err){
+        throw err;
+      }else{
+        res.render('frm_livrosListar.ejs', {
+          title: 'Livros',
+          empresa: 'Fatec Franca - Programação Script - WEB',
+          rota: req.originalUrl,
+          obj_livros: result
+        });      
+      }
+    }
+  )
+}
+  

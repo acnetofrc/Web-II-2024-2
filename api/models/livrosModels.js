@@ -7,7 +7,8 @@ module.exports = {
     getById,
     create,
     update,
-    remove
+    remove,
+    listarLivros    
 }
 
 function getAll(callback){
@@ -40,5 +41,11 @@ function update (dados, codigo, callback) {
 
 function remove(codigo, callback) {
     conexao.query("DELETE FROM livros WHERE liv_codigo = " + codigo, callback)
+}
+
+function listarLivros(callback){
+    m_sql = 'select A.*, B.aut_apelido, C.edt_nome from livros A left join autores B on A.aut_codigo = B.aut_codigo left join editoras C on A.edt_codigo = C.edt_codigo';
+  
+    conexao.query(m_sql, callback);
 }
 
