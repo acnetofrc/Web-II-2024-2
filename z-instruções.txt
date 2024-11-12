@@ -1,0 +1,26 @@
+D:\00-Atv\0-CPS\0-Fatec\00-Disciplinas\01-0-Web-Geral\00-Desenvolvimento Web\01-ADS-Scripts\001-AC-Exercicios\2019-2\Livros
+
+
+npm init
+
+npm install express --save
+
+npm install nodemon --save
+
+===================================================
+
+instalar engine EJS - (Embedded JavaScript Templating)
+
+npm install ejs
+
+====================================================
+
+subir arquivos:
+	- login.ejs
+	- logoFatec.jpeg
+
+substituir o objeto array "alunos" dos módulos controllers e models importanto o arquivo dados.
+
+	- dados.json
+
+
