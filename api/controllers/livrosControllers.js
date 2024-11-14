@@ -87,7 +87,7 @@ function remove(req, res){
 
 function livrosListar(req, res) {
     console.log('Controller Livros');
-    livrosController.listarLivros(function(err, result){
+    livrosModels.listarLivros(function(err, result){
       console.log('Listar Livros');
       if(err){
         throw err;

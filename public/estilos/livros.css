@@ -1,0 +1,13 @@
+
+/* tr:nth-child(2n+2) {
+    background: #ccc;
+} */
+
+tr:nth-child(even) {
+    background: #fe3e;
+}
+
+tr:nth-child(odd) {
+    background: #ccc;
+}
+

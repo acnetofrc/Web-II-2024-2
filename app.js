@@ -19,7 +19,7 @@ app.use(express.static('public'));
 app.use(express.static('estilos'));
 app.use(express.static('imagens'));
 app.use(express.static('js'));
- 
+
 const port = 3000;
 
 app.use("/", loginRoutes);
