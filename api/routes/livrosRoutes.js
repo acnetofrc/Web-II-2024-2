@@ -17,6 +17,5 @@ router.delete("/:id",controllerLivros.remove);
 
 router.post('/listar', controllerLivros.livrosListar);
 
-
 module.exports = router
 
