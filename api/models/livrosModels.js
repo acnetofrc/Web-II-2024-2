@@ -48,4 +48,3 @@ function listarLivros(callback){
   
     conexao.query(m_sql, callback);
 }
-
